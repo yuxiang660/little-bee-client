@@ -1,4 +1,5 @@
-const configs = require('./configs/configs.js');
+const configs = require('./configs/metadata.js');
+const postCssPlugins = require('./configs/postcss.js');
 
 module.exports = {
   pathPrefix: configs.pathPrefix,
@@ -14,7 +15,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-flow`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [...postCssPlugins],
+        cssLoaderOptions: {
+          camelCase: false,
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
