@@ -7,16 +7,45 @@ const useSiteMetadata = () => {
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            contents {
+              url
+              title
+              subtitle
+              copyright
+              disqusShortname
+              author {
+                name
+                bio
+                photo
+                contacts {
+                  facebook
+                  linkedin
+                  github
+                  twitter
+                  telegram
+                  instagram
+                  email
+                  rss
+                  vkontakte
+                  line
+                  gitlab
+                  weibo
+                  codepen
+                  youtube
+                }
+              }
+              menu {
+                label
+                path
+              }
+            }
           }
         }
       }
     `
   );
 
-  return site.siteMetadata;
+  return site.siteMetadata.contents;
 };
 
 export default useSiteMetadata;

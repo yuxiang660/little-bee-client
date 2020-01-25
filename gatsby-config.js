@@ -1,8 +1,9 @@
+const configs = require('./configs/configs.js');
+
 module.exports = {
+  pathPrefix: configs.pathPrefix,
   siteMetadata: {
-    title: `Little Bee Client`,
-    description: `Little Bee Client is an open site to share knowledge.`,
-    author: `Little Bee`,
+    contents: configs.siteMetadata,
   },
   plugins: [
     {
