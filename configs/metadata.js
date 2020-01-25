@@ -22,7 +22,7 @@ module.exports = {
     ],
     author: {
       name: 'Little Bee',
-      photo: '/photo.jpg',
+      photo: '/images/photo.jpg',
       bio: 'A open site to share knowledage.',
       contacts: {
         email: '',
