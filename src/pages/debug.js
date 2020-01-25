@@ -1,7 +1,7 @@
 import React from 'react'
 
 import useMarkdownRemark from '../query/markdown-remark'
-import Files from '../components/files/files'
+import Files from '../components/files'
 
 export default props => {
   const metadata = useMarkdownRemark();
