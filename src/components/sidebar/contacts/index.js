@@ -1,5 +1,7 @@
 // @flow strict
 import React from 'react';
+import { getContactHref, getIcon } from '../../../assets/util';
+import Icon from '../icon';
 import styles from './contacts.module.scss';
 
 type Props = {
@@ -15,9 +17,11 @@ const Contacts = ({ contacts }: Props) => (
         <li className={styles['contacts__list-item']} key={name}>
           <a
             className={styles['contacts__list-item-link']}
+            href={getContactHref(name, contacts[name])}
             rel="noopener noreferrer"
             target="_blank"
           >
+            <Icon name={name} icon={getIcon(name)} />
           </a>
         </li>
       )))}
