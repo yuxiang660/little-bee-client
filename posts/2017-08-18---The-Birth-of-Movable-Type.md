@@ -1,6 +1,5 @@
 ---
 title: "Johannes Gutenberg: The Birth of Movable Type"
-slug: "the-birth-of-movable-type"
 category: "Typography"
 tags:
   - "Open source"
