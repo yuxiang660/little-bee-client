@@ -97,6 +97,8 @@ $a^2 + b^2 = c^2$
 ## Image reshape
 * text
 ```
-![image-1](../images/image-1.jpg)
+![image-1](/images/image-1.jpg)
 ```
 * render
+
+![image-1](/images/image-1.jpg)
