@@ -1,5 +1,7 @@
 module.exports = {
   pathPrefix: '/little-bee-client',
+  postsPerPage: 4,
+  useKatex: false,
   siteMetadata: {
     url: 'https://yuxiang660.github.io/little-bee-client',
     title: `Little Bee Client`,
