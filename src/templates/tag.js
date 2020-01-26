@@ -58,7 +58,10 @@ export const query = graphql`
     allMarkdownRemark(
         limit: $postsLimit,
         skip: $postsOffset,
-        filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true } } },
+        filter: {
+          fields: { folder: { eq: "posts" } },
+          frontmatter: { tags: { in: [$tag] }, draft: { ne: true } }
+        },
         sort: { order: DESC, fields: [fields___date] }
       ){
       edges {

@@ -29,6 +29,12 @@ const onCreateNode = ({ node, actions, getNode }) => {
       value: new Date(`${getNode(node.parent).name}`.split(/---/)[0] + 'T00:00:00.000Z')
     });
 
+    createNodeField({
+      node,
+      name: 'folder',
+      value: `${getNode(node.parent).relativeDirectory}`
+    });
+
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map((tag) => `/tag/${_.kebabCase(tag)}/`);
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs });

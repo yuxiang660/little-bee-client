@@ -1,6 +1,5 @@
 ---
 title: "A Brief History of Typography"
-template: "post"
 draft: false
 slug: "a-brief-history-of-typography"
 category: "Design Inspiration"
