@@ -4,7 +4,7 @@ const path = require('path');
 const _ = require('lodash');
 const createCategoriesPages = require('./pagination/categories');
 const createTagsPages = require('./pagination/tags');
-const createPostsPages = require('./pagination/posts');
+const createMainPages = require('./pagination/main');
 
 const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -12,19 +12,19 @@ const createPages = async ({ graphql, actions }) => {
   // 404
   createPage({
     path: '/404',
-    component: path.resolve('./src/templates/not-found-template.js')
+    component: path.resolve('./src/templates/not-found.js')
   });
 
   // Tags list
   createPage({
     path: '/tags',
-    component: path.resolve('./src/templates/tags-list-template.js')
+    component: path.resolve('./src/templates/tags-list.js')
   });
 
   // Categories list
   createPage({
     path: '/categories',
-    component: path.resolve('./src/templates/categories-list-template.js')
+    component: path.resolve('./src/templates/categories-list.js')
   });
 
   // Posts and pages from markdown
@@ -53,13 +53,13 @@ const createPages = async ({ graphql, actions }) => {
     if (_.get(edge, 'node.frontmatter.template') === 'page') {
       createPage({
         path: edge.node.fields.slug,
-        component: path.resolve('./src/templates/page-template.js'),
+        component: path.resolve('./src/templates/page.js'),
         context: { slug: edge.node.fields.slug }
       });
     } else if (_.get(edge, 'node.frontmatter.template') === 'post') {
       createPage({
         path: edge.node.fields.slug,
-        component: path.resolve('./src/templates/post-template.js'),
+        component: path.resolve('./src/templates/post.js'),
         context: { slug: edge.node.fields.slug }
       });
     }
@@ -68,7 +68,7 @@ const createPages = async ({ graphql, actions }) => {
   // Feeds
   await createTagsPages(graphql, actions);
   await createCategoriesPages(graphql, actions);
-  await createPostsPages(graphql, actions);
+  await createMainPages(graphql, actions);
 };
 
 
