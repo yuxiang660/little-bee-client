@@ -14,10 +14,21 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              withWebp: true,
+              ignoreFileExtensions: [],
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -49,8 +60,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
