@@ -1,6 +1,5 @@
 ---
 title: The Origins of Social Stationery Lettering
-template: "post"
 draft: false
 slug: "the-origins-of-social-stationery-lettering"
 category: "Design Culture"
