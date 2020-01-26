@@ -1,7 +1,2 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
+require('./src/assets/scss/init.scss');
+require('./src/assets/css/prismjs/theme.min.css');
