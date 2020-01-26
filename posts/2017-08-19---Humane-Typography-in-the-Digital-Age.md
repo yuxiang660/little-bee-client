@@ -1,6 +1,5 @@
 ---
 title: Humane Typography in the Digital Age
-draft: false
 slug: "humane-typography-in-the-digital-age"
 category: "Typography"
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Perfecting the Art of Perfection
-draft: false
 slug: "perfecting-the-art-of-perfection"
 category: "Design Inspiration"
 tags:
