@@ -1,3 +1,3 @@
 'use strict';
 
-exports.onRenderBody = require('./src/create/ssr');
+exports.onRenderBody = require('./src/gatsby-api/ssr');

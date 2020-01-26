@@ -1,3 +1,3 @@
 'use strict';
 
-exports.onCreateNode = require('./src/create/nodes');
+exports.onCreateNode = require('./src/gatsby-api/nodes');
