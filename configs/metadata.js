@@ -24,7 +24,7 @@ module.exports = {
     author: {
       name: 'Little Bee',
       photo: '/images/photo.jpg',
-      bio: 'A open site to share knowledage.',
+      bio: 'A open site to share knowledge.',
       contacts: {
         email: '',
         facebook: '#',
