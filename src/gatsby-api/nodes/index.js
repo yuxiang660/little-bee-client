@@ -21,8 +21,21 @@ const onCreateNode = ({ node, actions, getNode }) => {
 
     createNodeField({
       node,
+      name: 'title',
+      value: `${getNode(node.parent).name}`.split(/---/)[1]
+    });
+
+    createNodeField({
+      node,
       name: 'folder',
       value: `${getNode(node.parent).relativeDirectory}`
+    });
+
+    const excerpt = node.internal.content.substring(0, 200).replace(/\r\n/g, "").replace(/\n/g, "") + '...\r\n'
+    createNodeField({
+      node,
+      name: 'excerpt',
+      value: excerpt
     });
 
     if (node.frontmatter.tags) {
