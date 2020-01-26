@@ -51,8 +51,7 @@ export const query = graphql`
         limit: $postsLimit,
         skip: $postsOffset,
         filter: {
-          fields: { folder: { eq: "posts" } },
-          frontmatter: { draft: { ne: true } }
+          fields: { folder: { eq: "posts" } }
         }
         sort: { order: DESC, fields: [fields___date] }
       ){

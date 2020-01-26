@@ -60,7 +60,7 @@ export const query = graphql`
         skip: $postsOffset,
         filter: {
           fields: { folder: { eq: "posts" } },
-          frontmatter: { tags: { in: [$tag] }, draft: { ne: true } }
+          frontmatter: { tags: { in: [$tag] } }
         },
         sort: { order: DESC, fields: [fields___date] }
       ){

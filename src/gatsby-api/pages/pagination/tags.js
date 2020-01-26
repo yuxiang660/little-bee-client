@@ -12,8 +12,7 @@ module.exports = async (graphql, actions) => {
     {
       allMarkdownRemark(
         filter: {
-          fields: { folder: { eq: "posts" } },
-          frontmatter: { draft: { ne: true } }
+          fields: { folder: { eq: "posts" } }
         }
       ) {
         group(field: frontmatter___tags) {
