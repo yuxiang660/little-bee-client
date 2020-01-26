@@ -14,13 +14,29 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
-    `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-remark-katex`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-        strict: `ignore`
-      }
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true,
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: true,
+              },
+            },
+          },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`
+            }
+          },
+        ],
+      },
     },
     `gatsby-plugin-flow`,
     `gatsby-plugin-react-helmet`,
