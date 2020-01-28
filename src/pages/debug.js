@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Sidebar from '../components/sidebar';
 import Pagination from '../components/pagination';
 
-export default props => {
+const Debug = (props) => {
   const metadata = useMarkdownRemark();
   return (
     <Layout>
@@ -16,3 +16,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default Debug;
