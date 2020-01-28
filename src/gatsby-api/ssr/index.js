@@ -1,5 +1,3 @@
-'use strict';
-
 const React = require('react');
 const katexStylesheet = require(`../../assets/css/katex/katex.min.css`);
 

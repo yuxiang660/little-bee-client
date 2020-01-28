@@ -1,3 +1,4 @@
+// @flow strict
 import React, { useRef, useEffect } from 'react';
 import styles from './page.module.scss';
 
