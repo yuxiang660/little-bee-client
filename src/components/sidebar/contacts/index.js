@@ -2,7 +2,7 @@
 import React from 'react';
 import { getContactHref, getIcon } from '../../../assets/utils';
 import Icon from '../icon';
-import styles from './contacts.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   contacts: {

@@ -1,13 +1,13 @@
 // @flow strict
 import React from 'react';
-import styles from './icon.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   name: string,
   icon: {
     viewBox?: string,
-    path?: string
-  }
+    path?: string,
+  },
 };
 
 const Icon = ({ name, icon }: Props) => (

@@ -1,23 +1,7 @@
-// @flow strict
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-type Node = {
-  parent: {
-    filename: string
-  }
-};
-
-type Edge = {
-  node: Node
-};
-
-type Edges = Array<Edge>;
-
-type Props = {
-  metadata?: Edges,
-};
-
-const Files = ({ metadata }: Props) => {
+const Files = ({ metadata }) => {
   const edges = metadata;
   return (
     <div>
@@ -37,7 +21,11 @@ const Files = ({ metadata }: Props) => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
+
+Files.propTypes = {
+  metadata: PropTypes.array.isRequired,
+};
 
 export default Files;

@@ -1,19 +1,19 @@
 // @flow strict
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from './menu.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   menu: {
     label: string,
-    path: string
-  }[]
+    path: string,
+  }[],
 };
 
 const Menu = ({ menu }: Props) => (
   <nav className={styles['menu']}>
     <ul className={styles['menu__list']}>
-      {menu.map((item) => (
+      {menu.map(item => (
         <li className={styles['menu__list-item']} key={item.path}>
           <Link
             to={item.path}

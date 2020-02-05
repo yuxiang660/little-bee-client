@@ -6,11 +6,11 @@ import Comments from './comments';
 import Content from './content';
 import Meta from './meta';
 import Tags from './tags';
-import styles from './post.module.scss';
+import styles from './index.module.scss';
 import type { Node } from '../../assets/types';
 
 type Props = {
-  post: Node
+  post: Node,
 };
 
 const Post = ({ post }: Props) => {
@@ -20,7 +20,9 @@ const Post = ({ post }: Props) => {
 
   return (
     <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">All Articles</Link>
+      <Link className={styles['post__home-button']} to="/">
+        All Articles
+      </Link>
 
       <div className={styles['post__content']}>
         <Content body={html} title={title} />

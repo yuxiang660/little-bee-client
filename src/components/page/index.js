@@ -1,10 +1,10 @@
 // @flow strict
 import React, { useRef, useEffect } from 'react';
-import styles from './page.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   title?: string,
-  children: React.Node
+  children: React.Node,
 };
 
 const Page = ({ title, children }: Props) => {
@@ -18,9 +18,7 @@ const Page = ({ title, children }: Props) => {
     <div ref={pageRef} className={styles['page']}>
       <div className={styles['page__inner']}>
         {title && <h1 className={styles['page__title']}>{title}</h1>}
-        <div className={styles['page__body']}>
-          {children}
-        </div>
+        <div className={styles['page__body']}>{children}</div>
       </div>
     </div>
   );

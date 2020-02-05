@@ -3,19 +3,15 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import type { Node as ReactNode } from 'react';
 
-import styles from './layout.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   children: ReactNode,
   title: string,
-  description?: string
+  description?: string,
 };
 
-const Layout = ({
-  children,
-  title,
-  description
-}: Props) => {
+const Layout = ({ children, title, description }: Props) => {
   return (
     <div className={styles.layout}>
       <Helmet>
