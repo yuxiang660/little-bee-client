@@ -1,5 +1,5 @@
 // @flow strict
-import { ICONS } from '../constants';
+import { ICONS } from 'src/assets/constants';
 
 const getIcon = (name: string) => {
   let icon;

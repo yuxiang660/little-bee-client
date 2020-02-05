@@ -1,13 +1,13 @@
 // @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import Sidebar from '../components/sidebar';
-import Feed from '../components/feed';
-import Page from '../components/page';
-import Pagination from '../components/pagination';
-import useSiteMetadata from '../query/site-metadata';
-import type { AllMarkdownRemark, PageContext } from '../assets/types';
+import Layout from 'src/components/layout';
+import Sidebar from 'src/components/sidebar';
+import Feed from 'src/components/feed';
+import Page from 'src/components/page';
+import Pagination from 'src/components/pagination';
+import useSiteMetadata from 'src/query/site-metadata';
+import type { AllMarkdownRemark, PageContext } from 'src/assets/types';
 
 type Props = {
   data: AllMarkdownRemark,

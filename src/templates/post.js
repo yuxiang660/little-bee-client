@@ -1,25 +1,26 @@
 // @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import Post from '../components/post';
-import useSiteMetadata from '../query/site-metadata';
-import type { MarkdownRemark } from '../assets/types';
+import Layout from 'src/components/layout';
+import Post from 'src/components/post';
+import useSiteMetadata from 'src/query/site-metadata';
+import type { MarkdownRemark } from 'src/assets/types';
 
 type Props = {
   data: {
-    markdownRemark: MarkdownRemark
-  }
+    markdownRemark: MarkdownRemark,
+  },
 };
 
 const PostTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { frontmatter } = data.markdownRemark;
   const { title: postTitle, description: postDescription } = frontmatter;
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
+  const metaDescription =
+    postDescription !== null ? postDescription : siteSubtitle;
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} >
+    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
       <Post post={data.markdownRemark} />
     </Layout>
   );

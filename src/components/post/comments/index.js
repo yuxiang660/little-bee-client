@@ -1,11 +1,11 @@
 // @flow strict
 import React from 'react';
 import ReactDisqusComments from 'react-disqus-comments';
-import useSiteMetadata from '../../../query/site-metadata';
+import useSiteMetadata from 'src/query/site-metadata';
 
 type Props = {
   postTitle: string,
-  postSlug: string
+  postSlug: string,
 };
 
 const Comments = ({ postTitle, postSlug }: Props) => {

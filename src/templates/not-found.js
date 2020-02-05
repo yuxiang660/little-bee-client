@@ -1,9 +1,9 @@
 // @flow strict
 import React from 'react';
-import Sidebar from '../components/sidebar';
-import Layout from '../components/layout';
-import Page from '../components/page';
-import useSiteMetadata from '../query/site-metadata';
+import Sidebar from 'src/components/sidebar';
+import Layout from 'src/components/layout';
+import Page from 'src/components/page';
+import useSiteMetadata from 'src/query/site-metadata';
 
 const NotFoundTemplate = () => {
   const { title, subtitle } = useSiteMetadata();

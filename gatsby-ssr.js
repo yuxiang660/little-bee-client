@@ -1,1 +1,1 @@
-exports.onRenderBody = require('./src/gatsby-api/ssr');
+exports.onRenderBody = require('src/gatsby-api/ssr');

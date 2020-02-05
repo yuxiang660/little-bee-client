@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
-import Sidebar from '../components/sidebar';
-import Layout from '../components/layout';
-import Page from '../components/page';
-import useSiteMetadata from '../query/site-metadata';
-import useCategoriesList from '../query/categories-list';
+import Sidebar from 'src/components/sidebar';
+import Layout from 'src/components/layout';
+import Page from 'src/components/page';
+import useSiteMetadata from 'src/query/site-metadata';
+import useCategoriesList from 'src/query/categories-list';
 
 const CategoriesListTemplate = () => {
   const { title, subtitle } = useSiteMetadata();
@@ -17,7 +17,7 @@ const CategoriesListTemplate = () => {
       <Sidebar />
       <Page title="Categories">
         <ul>
-          {categories.map((category) => (
+          {categories.map(category => (
             <li key={category.fieldValue}>
               <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
                 {category.fieldValue} ({category.totalCount})

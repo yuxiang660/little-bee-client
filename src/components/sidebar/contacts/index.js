@@ -1,7 +1,7 @@
 // @flow strict
 import React from 'react';
-import { getContactHref, getIcon } from '../../../assets/utils';
-import Icon from '../icon';
+import { getContactHref, getIcon } from 'src/assets/utils';
+import Icon from './icon';
 import styles from './index.module.scss';
 
 type Props = {

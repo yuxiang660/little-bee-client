@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
-import Layout from '../components/layout';
-import Sidebar from '../components/sidebar';
-import Page from '../components/page';
-import useSiteMetadata from '../query/site-metadata';
-import useTagsList from '../query/tags-list';
+import Layout from 'src/components/layout';
+import Sidebar from 'src/components/sidebar';
+import Page from 'src/components/page';
+import useSiteMetadata from 'src/query/site-metadata';
+import useTagsList from 'src/query/tags-list';
 
 const TagsListTemplate = () => {
   const { title, subtitle } = useSiteMetadata();
@@ -17,7 +17,7 @@ const TagsListTemplate = () => {
       <Sidebar />
       <Page title="Tags">
         <ul>
-          {tags.map((tag) => (
+          {tags.map(tag => (
             <li key={tag.fieldValue}>
               <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})

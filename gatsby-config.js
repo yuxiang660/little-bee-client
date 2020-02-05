@@ -7,6 +7,7 @@ module.exports = {
     contents: configs.siteMetadata,
   },
   plugins: [
+    'gatsby-plugin-root-import',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

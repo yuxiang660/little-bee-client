@@ -1,16 +1,16 @@
 // @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import Sidebar from '../components/sidebar';
-import Page from '../components/page';
-import useSiteMetadata from '../query/site-metadata';
-import type { MarkdownRemark } from '../assets/types';
+import Layout from 'src/components/layout';
+import Sidebar from 'src/components/sidebar';
+import Page from 'src/components/page';
+import useSiteMetadata from 'src/query/site-metadata';
+import type { MarkdownRemark } from 'src/assets/types';
 
 type Props = {
   data: {
-    markdownRemark: MarkdownRemark
-  }
+    markdownRemark: MarkdownRemark,
+  },
 };
 
 const PageTemplate = ({ data }: Props) => {
@@ -18,10 +18,11 @@ const PageTemplate = ({ data }: Props) => {
   const { html: pageBody } = data.markdownRemark;
   const { frontmatter } = data.markdownRemark;
   const { title: pageTitle, description: pageDescription } = frontmatter;
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+  const metaDescription =
+    pageDescription !== null ? pageDescription : siteSubtitle;
 
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} >
+    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
       <Sidebar />
       <Page title={pageTitle}>
         <div dangerouslySetInnerHTML={{ __html: pageBody }} />
