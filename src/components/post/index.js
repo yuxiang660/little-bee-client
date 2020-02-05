@@ -7,7 +7,7 @@ import Content from './content';
 import Meta from './meta';
 import Tags from './tags';
 import styles from './index.module.scss';
-import type { Node } from '../../assets/types';
+import type { Node } from 'src/assets/types';
 
 type Props = {
   post: Node,
