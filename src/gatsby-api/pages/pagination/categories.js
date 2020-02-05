@@ -8,11 +8,7 @@ module.exports = async (graphql, actions) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        filter: {
-          fields: { folder: { eq: "posts" } }
-        }
-      ) {
+      allMarkdownRemark(filter: { fields: { template: { eq: "posts" } } }) {
         group(field: frontmatter___category) {
           fieldValue
           totalCount
@@ -21,7 +17,7 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  _.each(result.data.allMarkdownRemark.group, (category) => {
+  _.each(result.data.allMarkdownRemark.group, category => {
     const numPages = Math.ceil(category.totalCount / postsPerPage);
     const categorySlug = `/category/${_.kebabCase(category.fieldValue)}`;
 
@@ -37,8 +33,8 @@ module.exports = async (graphql, actions) => {
           prevPagePath: i <= 1 ? categorySlug : `${categorySlug}/page/${i - 1}`,
           nextPagePath: `${categorySlug}/page/${i + 1}`,
           hasPrevPage: i !== 0,
-          hasNextPage: i !== numPages - 1
-        }
+          hasNextPage: i !== numPages - 1,
+        },
       });
     }
   });

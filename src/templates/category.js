@@ -11,7 +11,7 @@ import type { PageContext, AllMarkdownRemark } from '../assets/types';
 
 type Props = {
   data: AllMarkdownRemark,
-  pageContext: PageContext
+  pageContext: PageContext,
 };
 
 const CategoryTemplate = ({ data, pageContext }: Props) => {
@@ -27,7 +27,10 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage} - ${siteTitle}` : `${category} - ${siteTitle}`;
+  const pageTitle =
+    currentPage > 0
+      ? `${category} - Page ${currentPage} - ${siteTitle}`
+      : `${category} - ${siteTitle}`;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -48,14 +51,14 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
 export const query = graphql`
   query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: {
-          fields: { folder: { eq: "posts" } },
-          frontmatter: { category: { eq: $category } }
-        },
-        sort: { order: DESC, fields: [fields___date] }
-      ){
+      limit: $postsLimit
+      skip: $postsOffset
+      filter: {
+        fields: { template: { eq: "posts" } }
+        frontmatter: { category: { eq: $category } }
+      }
+      sort: { order: DESC, fields: [fields___date] }
+    ) {
       edges {
         node {
           fields {

@@ -5,11 +5,7 @@ const useTagsList = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query TagsListQuery {
-        allMarkdownRemark(
-          filter: {
-            fields: { folder: { eq: "posts" } }
-          }
-        ) {
+        allMarkdownRemark(filter: { fields: { template: { eq: "posts" } } }) {
           group(field: frontmatter___tags) {
             fieldValue
             totalCount

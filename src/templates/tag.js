@@ -11,7 +11,7 @@ import type { AllMarkdownRemark, PageContext } from '../assets/types';
 
 type Props = {
   data: AllMarkdownRemark,
-  pageContext: PageContext
+  pageContext: PageContext,
 };
 
 const TagTemplate = ({ data, pageContext }: Props) => {
@@ -23,11 +23,14 @@ const TagTemplate = ({ data, pageContext }: Props) => {
     prevPagePath,
     nextPagePath,
     hasPrevPage,
-    hasNextPage
+    hasNextPage,
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}` : `All Posts tagged as "${tag}" - ${siteTitle}`;
+  const pageTitle =
+    currentPage > 0
+      ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}`
+      : `All Posts tagged as "${tag}" - ${siteTitle}`;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -56,14 +59,14 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: {
-          fields: { folder: { eq: "posts" } },
-          frontmatter: { tags: { in: [$tag] } }
-        },
-        sort: { order: DESC, fields: [fields___date] }
-      ){
+      limit: $postsLimit
+      skip: $postsOffset
+      filter: {
+        fields: { template: { eq: "posts" } }
+        frontmatter: { tags: { in: [$tag] } }
+      }
+      sort: { order: DESC, fields: [fields___date] }
+    ) {
       edges {
         node {
           fields {
