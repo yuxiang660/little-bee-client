@@ -10,20 +10,20 @@ module.exports = {
     menu: [
       {
         label: 'Articles',
-        path: '/'
+        path: '/',
       },
       {
         label: 'About me',
-        path: '/pages/about'
+        path: '/pages/about',
       },
       {
         label: 'Contact me',
-        path: '/pages/contacts'
-      }
+        path: '/pages/contacts',
+      },
     ],
     author: {
       name: 'Little Bee',
-      photo: '/images/photo.jpg',
+      photo: '/images/index/photo.jpg',
       bio: 'A open site to share knowledge.',
       contacts: {
         email: '',
@@ -39,8 +39,8 @@ module.exports = {
         gitlab: '',
         weibo: '',
         codepen: '',
-        youtube: ''
+        youtube: '',
       },
     },
   },
-}
+};

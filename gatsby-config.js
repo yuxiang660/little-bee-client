@@ -34,8 +34,8 @@ module.exports = {
             options: {
               showLineNumbers: true,
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: true,
               },
             },
@@ -43,8 +43,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-katex`,
             options: {
-              strict: `ignore`
-            }
+              strict: `ignore`,
+            },
           },
         ],
       },
@@ -57,8 +57,8 @@ module.exports = {
         postCssPlugins: [...postCssPlugins],
         cssLoaderOptions: {
           camelCase: false,
-        }
-      }
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -69,11 +69,11 @@ module.exports = {
         background_color: '#FFF',
         theme_color: '#F7A046',
         display: 'standalone',
-        icon: '.github/logo.jpg'
+        icon: 'static/images/index/icon.png',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
