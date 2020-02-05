@@ -19,22 +19,16 @@
   }
 
   &__body {
-    & figure {
-      @include margin-bottom(1);
-
-      & blockquote {
-        font-style: italic;
-        text-align: center;
-        margin-top: 0;
-        @include padding(1, 0);
-
-        & p {
-          max-width: $layout-post-width;
-          font-size: $typographic-base-font-size * 1.6817;
-          margin-top: 0;
-          @include margin-bottom(1);
-          @include line-height(1.5);
-        }
+    & blockquote {
+      text-align: left;
+      position: relative;
+      padding-left: 1em;
+      border-left: 0.2em solid lighten(hsl(200, 40, 10), 40%);
+      background: #E8E8E8;
+      & p {
+        max-width: $layout-post-width;
+        font-family: 'Sanchez';
+        font-size: $typographic-base-font-size * 1.125;
       }
     }
 
