@@ -1,6 +1,6 @@
 // @flow strict
 import React from 'react';
-import { getContactHref } from '../../../assets/util';
+import { getContactHref } from '../../../assets/utils';
 import styles from './author.module.scss';
 import useSiteMetadata from '../../../query/site-metadata';
 
