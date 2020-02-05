@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useMarkdownRemark from 'src/query/markdown-remark';
+import useMarkdownRemark from 'src/shared/query/markdown-remark';
 import Files from 'src/components/files';
 import Layout from 'src/components/layout';
 import Sidebar from 'src/components/sidebar';

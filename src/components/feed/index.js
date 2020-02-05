@@ -2,7 +2,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'gatsby';
-import type { Edges } from 'src/assets/types';
+import type { Edges } from 'src/shared/types';
 import styles from './index.module.scss';
 
 type Props = {

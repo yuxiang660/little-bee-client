@@ -3,8 +3,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from 'src/components/layout';
 import Post from 'src/components/post';
-import useSiteMetadata from 'src/query/site-metadata';
-import type { MarkdownRemark } from 'src/assets/types';
+import useSiteMetadata from 'src/shared/query/site-metadata';
+import type { MarkdownRemark } from 'src/shared/types';
 
 type Props = {
   data: {

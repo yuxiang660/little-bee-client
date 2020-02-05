@@ -6,8 +6,8 @@ import Sidebar from 'src/components/sidebar';
 import Feed from 'src/components/feed';
 import Page from 'src/components/page';
 import Pagination from 'src/components/pagination';
-import useSiteMetadata from 'src/query/site-metadata';
-import type { AllMarkdownRemark, PageContext } from 'src/assets/types';
+import useSiteMetadata from 'src/shared/query/site-metadata';
+import type { AllMarkdownRemark, PageContext } from 'src/shared/types';
 
 type Props = {
   data: AllMarkdownRemark,

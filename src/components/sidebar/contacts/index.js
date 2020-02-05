@@ -1,6 +1,6 @@
 // @flow strict
 import React from 'react';
-import { getContactHref, getIcon } from 'src/assets/utils';
+import { getContactHref, getIcon } from 'src/shared/utils';
 import Icon from './icon';
 import styles from './index.module.scss';
 

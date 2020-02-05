@@ -5,8 +5,8 @@ import kebabCase from 'lodash/kebabCase';
 import Layout from 'src/components/layout';
 import Sidebar from 'src/components/sidebar';
 import Page from 'src/components/page';
-import useSiteMetadata from 'src/query/site-metadata';
-import useTagsList from 'src/query/tags-list';
+import useSiteMetadata from 'src/shared/query/site-metadata';
+import useTagsList from 'src/shared/query/tags-list';
 
 const TagsListTemplate = () => {
   const { title, subtitle } = useSiteMetadata();

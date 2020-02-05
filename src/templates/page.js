@@ -4,8 +4,8 @@ import { graphql } from 'gatsby';
 import Layout from 'src/components/layout';
 import Sidebar from 'src/components/sidebar';
 import Page from 'src/components/page';
-import useSiteMetadata from 'src/query/site-metadata';
-import type { MarkdownRemark } from 'src/assets/types';
+import useSiteMetadata from 'src/shared/query/site-metadata';
+import type { MarkdownRemark } from 'src/shared/types';
 
 type Props = {
   data: {

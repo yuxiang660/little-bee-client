@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'gatsby';
-import { PAGINATION } from 'src/assets/constants';
+import { PAGINATION } from 'src/shared/constants';
 import styles from './index.module.scss';
 
 type Props = {
