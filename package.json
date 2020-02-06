@@ -9,7 +9,7 @@
     "develop": "gatsby clean && gatsby develop",
     "predeploy": "gatsby clean && gatsby build --prefix-paths",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby clean && gatsby build && gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-remark-autolink-headers": "^2.1.23",
     "gatsby-remark-images": "^3.1.42",
     "gatsby-remark-katex": "^3.1.23",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0",
-    "gatsby-plugin-root-import": "^2.0.5"
+    "gatsby-plugin-root-import": "^2.0.5",
+    "typescript": "^3.7.5"
   }
 }

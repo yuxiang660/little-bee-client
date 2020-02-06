@@ -52,6 +52,7 @@ module.exports = {
     },
     `gatsby-plugin-flow`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
     {
       resolve: 'gatsby-plugin-sass',
       options: {
