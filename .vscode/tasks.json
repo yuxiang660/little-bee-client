@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "ESlint",
+      "label": "ES-lint",
       "type": "shell",
       "command": "./node_modules/.bin/eslint",
       "windows": {
@@ -16,6 +16,13 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "TS-Build",
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": ["$tsc"],
+      "group": "build"
     }
   ]
 }

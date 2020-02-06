@@ -10,14 +10,27 @@
     "predeploy": "gatsby clean && gatsby build --prefix-paths",
     "start": "npm run develop",
     "serve": "gatsby clean && gatsby build && gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "type-check": "tsc",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged && npm run type-check"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "eslint --ext .js,.jsx,.ts,.tsx",
+    "**/*.{js,jsx,tsx,ts,css,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",
     "classnames": "^2.2.6",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
-    "gatsby-plugin-flow": "^1.1.18",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
@@ -46,11 +59,17 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/lodash": "^4.14.149",
+    "@types/react-helmet": "^5.0.15",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
     "gatsby-plugin-root-import": "^2.0.5",
-    "typescript": "^3.7.5"
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.0-dev.20200206"
   }
 }

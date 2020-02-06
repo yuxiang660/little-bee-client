@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 const configs = require('./configs/metadata.js');
 const postCssPlugins = require('./configs/postcss.js');
 
@@ -50,7 +51,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-flow`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {

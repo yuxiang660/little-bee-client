@@ -13,14 +13,12 @@ module.exports = async (graphql, actions) => {
   `);
 
   const { postsPerPage } = siteConfig;
-  const numPages = Math.ceil(
-    result.data.allMarkdownRemark.totalCount / postsPerPage
-  );
+  const numPages = Math.ceil(result.data.allMarkdownRemark.totalCount / postsPerPage);
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({
       path: i === 0 ? '/' : `/page/${i}`,
-      component: path.resolve('./src/templates/main.js'),
+      component: path.resolve('./src/templates/main.tsx'),
       context: {
         currentPage: i,
         postsLimit: postsPerPage,
