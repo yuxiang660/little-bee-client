@@ -10,7 +10,6 @@ type Props = {
 };
 
 const Feed = ({ edges }: Props) => {
-  console.log(edges);
   return (
     <div className={styles['feed']}>
       {edges.map(edge => (

@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Little Bee <yuxiang660@gmail.com>",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "develop": "gatsby clean && gatsby develop",
     "predeploy": "gatsby clean && gatsby build --prefix-paths",
     "start": "npm run develop",
