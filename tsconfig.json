@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "noUnusedLocals": false,
     "allowJs": true,
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
   "include": ["src/**/*"],
   "files": [".declare.d.ts"],

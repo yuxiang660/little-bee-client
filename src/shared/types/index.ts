@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface MarkdownRemark {
   html: string;
   id: string;
@@ -41,4 +43,9 @@ export interface PageContext {
   nextPagePath: string;
   hasPrevPage: boolean;
   hasNextPage: boolean;
+}
+
+export interface RenderCallback {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  render: (data: any) => React.ReactNode;
 }
