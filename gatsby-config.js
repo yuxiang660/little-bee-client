@@ -62,6 +62,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-antd',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
