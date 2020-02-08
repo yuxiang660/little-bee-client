@@ -6,7 +6,7 @@ module.exports = {
     title: `Little Bee Playground`,
     subtitle: 'Knowledge Playground',
     copyright: '© All rights reserved.',
-    disqusShortname: 'LBP',
+    disqusShortname: 'Bee',
     menu: [
       {
         label: 'Articles',
@@ -14,11 +14,11 @@ module.exports = {
       },
       {
         label: 'Play on Playground',
-        path: '/pages/play/',
+        path: '/pages/1/play/',
       },
       {
         label: 'About Playground',
-        path: '/pages/about/',
+        path: '/pages/2/about/',
       },
     ],
     author: {
@@ -30,8 +30,8 @@ module.exports = {
         email: 'yuxiang660@163.com',
         gitlab: 'yuxiang660',
         codepen: 'yuxiang660',
+        twitter: 'LittleB10429107',
         weibo: '#',
-        twitter: '#',
         facebook: '',
         telegram: '',
         rss: '',
