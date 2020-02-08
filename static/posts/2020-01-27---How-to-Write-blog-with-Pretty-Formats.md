@@ -1,17 +1,21 @@
 ---
-title: "How to write a blog with pretty formats"
-category: "Practice"
+title: 'How to write a blog with pretty formats'
+category: 'Practice'
 tags:
-  - "Blog"
-description: "This doc will show different format of a blog in little bee playground."
+  - 'Blog'
+description: 'This doc will show different format of a blog in little bee playground.'
 ---
 
 # Why
+
 For this doc, it's going to solve the problem:
+
 - How to write a blog with pretty formats?
 
 # What
+
 The blog in little be playground supports following formats:
+
 - Basic markdown syntax
 - Code highlighting
 - Shell prompt
@@ -19,44 +23,57 @@ The blog in little be playground supports following formats:
 - Math equation
 - Image reshape
 - Auto link headers
+- Codepen
 
 # How
+
 ## Basic markdown syntax
+
 ### Quote
-* text
+
+- text
+
 ```
 > This is a quote.
 ```
-* render<br>
-> This is a quote.
+
+- render<br>
+  > This is a quote.
 
 ### Test format
-* text
+
+- text
+
 ```
 *Italic*, **Bold**, ***Bold and Italic***
 ```
-* render<br>
-*Italic*, **Bold**, ***Bold and Italic***
+
+- render<br> _Italic_, **Bold**, **_Bold and Italic_**
 
 ### Table
-* text
-```
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-```
-* render
 
+- text
+
+```
 | Tables   |      Are      |  Cool |
 |----------|:-------------:|------:|
 | col 1 is |  left-aligned | $1600 |
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
+```
+
+- render
+
+| Tables   |      Are      |   Cool |
+| -------- | :-----------: | -----: |
+| col 1 is | left-aligned  | \$1600 |
+| col 2 is |   centered    |   \$12 |
+| col 3 is | right-aligned |    \$1 |
 
 ## Code highlighting
+
 ## cpp
+
 ```cpp
 // C++ Header
 void main() {
@@ -66,39 +83,59 @@ void main() {
 ```
 
 ## javascript
+
 ```js
 console.log('Hello');
 ```
 
 ## python
+
 ```python
 print('Hello')
 ```
 
 ## Shell prompt
-* render
+
+- render
 
 ```bash
 ls
 ```
 
 ## Emoji
+
 😀 😁 😂 🤣 😃 😄
 
 ## Math equation
-* text
+
+- text
+
 ```
 $a^2 + b^2 = c^2$
 ```
-* render
+
+- render
 
 $a^2 + b^2 = c^2$
 
 ## Image reshape
-* text
+
+- text
+
 ```
 ![image-1](/images/image-1.jpg)
 ```
-* render
+
+- render
 
 ![image-1](/images/image-1.jpg)
+
+## Codepen
+
+- text
+
+```
+https://codepen.io/yuxiang660/pen/mdJymeK
+```
+
+- render https://codepen.io/yuxiang660/pen/mdJymeK
