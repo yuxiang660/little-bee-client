@@ -13,7 +13,7 @@ module.exports = {
         path: '/',
       },
       {
-        label: 'Play on Playground',
+        label: 'On Playground',
         path: '/pages/1/play/',
       },
       {
