@@ -6,4 +6,4 @@ title: '关于蜂乐场'
 
 [链接 2](/posts/0/2020-01-27---How-to-Write-blog-with-Pretty-Formats/)
 
-![playground](/pages/2/playground.jpg)
+![playground](http://q53wkmg88.bkt.clouddn.com/playground.jpg)
