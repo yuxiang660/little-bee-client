@@ -23,7 +23,6 @@ The blog in little be playground supports following formats:
 - Math equation
 - Image reshape
 - Auto link headers
-- Codepen
 
 # How
 
@@ -129,13 +128,3 @@ $a^2 + b^2 = c^2$
 - render
 
 ![image-1](/images/image-1.jpg)
-
-## Codepen
-
-- text
-
-```
-https://codepen.io/yuxiang660/pen/mdJymeK
-```
-
-- render https://codepen.io/yuxiang660/pen/mdJymeK
