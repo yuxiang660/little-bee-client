@@ -14,7 +14,6 @@ describe('Author', () => {
   beforeEach(() => {
     mockedStaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(siteMetadata),
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
       mockedUseStaticQuery.mockReturnValue(siteMetadata),
     );

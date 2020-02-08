@@ -20,7 +20,6 @@ describe('CategoriesListTemplate', () => {
   beforeEach(() => {
     mockedStaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(props),
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
       mockedUseStaticQuery.mockReturnValue(props),
     );

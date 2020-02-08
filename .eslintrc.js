@@ -45,6 +45,7 @@ module.exports = {
     '@typescript-eslint/explicit-member-accessibility': 0,
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/ban-ts-ignore': 0,
 
     // Conflict with prettier
     'arrow-body-style': ['error', 'as-needed'],
