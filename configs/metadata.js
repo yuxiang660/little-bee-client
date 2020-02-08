@@ -14,11 +14,11 @@ module.exports = {
       },
       {
         label: 'Play on Playground',
-        path: '/pages/play',
+        path: '/pages/play/',
       },
       {
         label: 'About Playground',
-        path: '/pages/about',
+        path: '/pages/about/',
       },
     ],
     author: {
