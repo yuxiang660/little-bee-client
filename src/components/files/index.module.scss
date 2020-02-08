@@ -1,0 +1,41 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.filter {
+  lost-column: 2/3;
+  padding: 30px 0px 20px;
+}
+
+.table {
+  lost-column: 2/3;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  tbody {
+    td {
+      font-size: 15px;
+    }
+  }
+  thead {
+    background: #fac600;
+    border-bottom: 5px solid #ffffff;
+    th {
+      font-size: 17px;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+      border-left: 2px solid #ffffff;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}
+
+@include breakpoint-md {
+  .page {
+    lost-column: 2/3;
+    &__inner {
+      padding: 40px 35px;
+    }
+  }
+}

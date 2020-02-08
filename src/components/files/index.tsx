@@ -1,34 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Input } from 'antd';
 
-interface FileProps {
-  metadata: {
-    node: {
-      parent: {
-        name: string;
-      };
-    };
-  }[];
-}
+import useMarkdownRemark from 'src/shared/query/markdown-remark';
 
-const Files: React.FC<FileProps> = ({ metadata }) => {
-  const edges = metadata;
+import styles from './index.module.scss';
+
+const Files = () => {
+  const allFiles = useMarkdownRemark();
+  const [state, setState] = useState<{ filteredFiles: (string | undefined)[] }>({
+    filteredFiles: allFiles.map(file => file.node.parent.name),
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const filteredFiles = allFiles.map(file => {
+      const title = file.node.parent.name;
+      if (title.toLowerCase().includes(e.target.value.toLowerCase())) {
+        return title;
+      }
+    });
+    setState({ filteredFiles });
+  };
+
   return (
-    <div>
-      <h1>All Pages</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Filename</th>
-          </tr>
-        </thead>
-        <tbody>
-          {edges.map((edge, index) => (
-            <tr key={index}>
-              <td>{edge.node.parent.name}</td>
+    <div className={styles.page}>
+      <div className={styles.filter}>
+        <Input placeholder="filter posts" type="text" onChange={handleChange} />
+      </div>
+      <div>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Filenames</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {state.filteredFiles.map((file, index) => (
+              <tr key={index}>
+                <td>{file}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,14 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-const useMarkdownRemark = () => {
+interface MarkdownRemarkReturns {
+  node: {
+    parent: {
+      name: string;
+    };
+  };
+}
+
+const useMarkdownRemark = (): MarkdownRemarkReturns[] => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
