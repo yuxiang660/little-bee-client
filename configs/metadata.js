@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://yuxiang660.github.io/little-bee-client',
     title: `Little Bee Playground`,
-    subtitle: 'Knowledge Site',
+    subtitle: 'Knowledge Playground',
     copyright: '© All rights reserved.',
     disqusShortname: 'LBP',
     menu: [
