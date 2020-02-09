@@ -80,6 +80,7 @@ description: "博客内容简短描述（会显示在主页中）"
     - `tags`指定了“蜂博客”的标签
     - 每篇博客可以指定多个标签
     - “蜂工地”支持按标签显示博客列表
+    - 常见的`tags`有：`GettingStarted`，`Intro`等
 
 ## 博客主体结构
 
@@ -94,4 +95,4 @@ description: "博客内容简短描述（会显示在主页中）"
 
 ## 博客内容格式
 
-“蜂博客”需按照[Markdown](https://www.jianshu.com/p/191d1e21f7ed)语法编写，以保证博客渲染格式。详情可参见博文：[“蜂博客”Markdown格式简介](/posts/2/2020-02-09---Bee-Blog-Pretty-Format.md)
+“蜂博客”需按照[Markdown](https://www.jianshu.com/p/191d1e21f7ed)语法编写，以保证博客渲染格式。详情可参见博文：[“蜂博客”文档格式简介](/posts/2/2020-02-09---Bee-Blog-Pretty-Format/)
