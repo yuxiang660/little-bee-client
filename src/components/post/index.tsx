@@ -30,7 +30,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
   return (
     <div className={styles['post']}>
       <Link className={styles['post__home-button']} to="/">
-        All Articles
+        All Bee Blogs
       </Link>
 
       <div className={styles['post__content']}>

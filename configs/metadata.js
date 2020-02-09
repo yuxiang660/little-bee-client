@@ -9,7 +9,7 @@ module.exports = {
     disqusShortname: 'Bee',
     menu: [
       {
-        label: 'Articles',
+        label: 'Bee Blogs',
         path: '/',
       },
       {
