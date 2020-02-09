@@ -22,16 +22,16 @@ title: '关于蜂乐场'
 - ["蜂工地"](https://github.com/yuxiang660/little-bee-client)
 
     “蜂工地”是“蜂乐园”的**前台客户端**，就是您现在正在浏览的网页。它是“蜂乐园”内容展示的载体，是“蜂乐园”的入口，用于大家了解“蜂乐园”。当前主要以博客形式展示，希望以后能支持更多形式。<br>
-    “蜂工地”是一个基于["Gatsby"](https://www.gatsbyjs.org/)框架的`React`网站，详细信息可参考站内文章。
+    “蜂工地”是一个基于["Gatsby"](https://www.gatsbyjs.org/)框架的`React`网站，详情可参考博文：[“蜂工地”简介]()。
 
 - ["蜂监工"](https://github.com/yuxiang660/little-bee-admin)
 
-    “蜂监工”是“蜂乐园”的**后台客户端**，用于监管“蜂乐园”平台，包括，查看“蜂乐园”服务器状态，管理“蜂乐园”用户、数据等。<br> “蜂监工”是一个基于["Ant Design Pro"](https://pro.ant.design/index-cn)框架的`REST`风格网站，详细信息可参考站内文章。
+    “蜂监工”是“蜂乐园”的**后台客户端**，用于监管“蜂乐园”平台，包括，查看“蜂乐园”服务器状态，管理“蜂乐园”用户、数据等。<br> “蜂监工”是一个基于["Ant Design Pro"](https://pro.ant.design/index-cn)框架的`REST`风格网站，详情可参考博文：[“蜂监工”简介]()。
 
 - ["蜂工厂"](https://github.com/yuxiang660/little-bee-server)
 
     “蜂工厂”是“蜂乐园”的**服务器**，为“蜂乐园”平台提供服务，包括：处理并存储“蜂乐园”用户、数据等。<br>
-    “蜂工厂”是一个基于["Gin"](https://gin-gonic.com/docs/)框架的`REST`风格服务器，详细信息可参考站内文章。
+    “蜂工厂”是一个基于["Gin"](https://gin-gonic.com/docs/)框架的`REST`风格服务器，详情可参考博文：[“蜂工厂”简介]()。
 
 ### “蜂乐园”能做什么？
 
