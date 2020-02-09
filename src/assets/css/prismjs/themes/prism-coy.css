@@ -104,7 +104,7 @@ pre[class*='language-']:after {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #7d8b99;
+  color: #1aa153;
 }
 
 .token.punctuation {
