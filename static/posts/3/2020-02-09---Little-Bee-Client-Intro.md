@@ -109,13 +109,14 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 ```bash
 git clone https://github.com/yuxiang660/little-bee-client.git
 npm i
-npm start
+gatsby develop
 ```
 * 输入'debug'页面的URL：`http://localhost:8000/debug`，得到如下页面：
-![DebugPage](http://q53wkmg88.bkt.clouddn.com/debug-page.png)
+
+  ![DebugPage](http://q53wkmg88.bkt.clouddn.com/debug-page.png)
 
 ### Debug页面代码解析
-* JS代码
+- JS代码
 
 ```js
 const Debug = () =>
@@ -128,4 +129,58 @@ const Debug = () =>
 export default Debug;
 ```
 
+- 'debug'网页生成流程如下：
+  - `gatsby develop`命令行会开始编译项目文件。
+  - `Gatsby`读取`/src/pages`下的`debug.tsx`文件。
+  - 渲染该文件`export`的[React-JSX](https://zh-hans.reactjs.org/docs/introducing-jsx.html#___gatsby)，如果你对`React-JSX`不是很了解，可以简单理解为一种强大的`HTML`。
+  - `Gatsby`会根据`/src/pages`下的`debug.tsx`文件的文件名，为该页面生成对应的路由地址。因此，可以直接通过`http://localhost:8000/debug`访问到该页面。如果在`/src/pages`下创建`index.tsx`文件，则可以在路由中省略`index`，直接通过`http://localhost:8000`访问。下图显示了“蜂工地”的部分可用路由：<br>
+  ![Routers](http://q53wkmg88.bkt.clouddn.com/litte-bee-routers.png)
+
 ## 利用模板动态生成一个网页
+静态网站生成器之所以叫生成器，就是因为他们可以根据模板，自动生成多个页面。`Gatsby`作为一个强大的静态网站生成器（当然`Gatsby`的功能远大于一个静态网站生成器），自然可以根据模板生成页面。
+
+简单来说，如下图所示，`Gatsby`读取对用户友好的`Markdown`文件，按照`template`模板的规则，自动生成对应的一个网页。这样，用户就可以只撰写一个`Markdown`语法格式的文档，就可以得到一个网页，分享在互联网上。
+![gatsby-template](http://q53wkmg88.bkt.clouddn.com/gatsby-template.png)
+
+下面以[/src/templates/not-found.tsx](https://github.com/yuxiang660/little-bee-client/blob/master/src/templates/not-found.tsx)为例子，阐述“蜂工地”的动态页面生成过程。
+
+### 'not-found'页面效果
+
+* 启动“蜂工地”后，在浏览器中输入：`http://localhost:8000/404`，得到如下页面：
+
+  ![not-found-page](http://q53wkmg88.bkt.clouddn.com/not-found-page.png)
+
+### 'not-found'动态页面生成代码分析
+- `not-found`模板代码
+
+```js
+// /src/templates/not-found.tsx
+const NotFoundTemplate = () => {
+  const { title, subtitle } = useSiteMetadata();
+
+  return (
+    <Layout title={`Not Found - ${title}`} description={subtitle}>
+      <Sidebar />
+      <Page title="NOT FOUND">
+        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      </Page>
+    </Layout>
+  );
+};
+export default NotFoundTemplate;
+```
+
+- `Gatsby`动态生成网页代码
+
+```js
+// /src/gatsby-api/pages/index.js
+createPage({
+  path: '/404',
+  component: path.resolve('./src/templates/not-found.tsx'),
+});
+```
+
+你会发现，模板代码和静态页面的JS代码没有什么区别，都是`export`一个`React-JSX`。甚至对于`not-found`页面，把其模板文件挪到`/src/pages`文件夹下，并重命名为`404.tsx`。同样能在`http://localhost:8000/404`下访问到相同的页面。
+
+那动态生成网页相对静态页面有什么优势呢？
+
