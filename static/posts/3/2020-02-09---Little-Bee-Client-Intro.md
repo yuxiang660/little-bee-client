@@ -38,7 +38,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 
 ## `Gatsby`是如何工作的？
 
-`Gatsby`涉及的技术比较多，简单地说它是一个静态网页生成器，可以读取`Markdown`文件并在网页中渲染出来。因此十分适合做一个博客系统。详情可参考“蜂博客”：["Gastby"简介]()
+`Gatsby`涉及的技术比较多，简单地说它是一个静态网页生成器，可以读取`Markdown`文件并在网页中渲染出来。因此十分适合做一个博客系统。详情可参考“蜂博客”：[什么是"Gastby"]()
 
 ## “蜂工地”是如何工作的？
 
@@ -88,13 +88,41 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 ```
 
 - `Gatsby API`文件
-  - 可以简单理解为"Gatsby"框架的`Hook`，详情可参考[官网](https://www.gatsbyjs.org/docs/api-files/)或者[“蜂博客”-"Gastby"简介]()。
+  - 可以简单理解为"Gatsby"框架的`Hook`，详情可参考[官网](https://www.gatsbyjs.org/docs/api-files/)或者[“蜂博客”-什么是"Gastby"]()。
 - `gatsby-api`文件夹
   - 存放了被`Gatsby API`文件调用的子模块
 - `src/pages`文件夹
   - 存放静态网页的JS文件。一个文件对应一个也面。路由名称即文件名。
 - `src/components`文件夹
-  - 存放动态网页模板文件。被`Gatsby API`文件--`gatsby-node.js`在编译时调用，生成静态网页。
+  - 存放用于动态生成网页的模板文件。被`Gatsby API`文件--`gatsby-node.js`在编译时调用，生成静态网页。
 - `static`文件夹
   - 网站的静态资源，不涉及网站代码，包括图片于和博客文件等。
 
+## 利用JS文件产生一个网页
+“蜂工地”公开的网页都是通过[模板](https://github.com/yuxiang660/little-bee-client/tree/master/src/templates)动态生成的，只有一个内部调试的['debug'页面](https://github.com/yuxiang660/little-bee-client/blob/master/src/pages/debug.tsx)利用JS文件（准确的说是TS文件，“蜂工地”为保证产品质量，都是基于`TypeScript`编写的）生成。<br>
+下面以此'debug'页面诠释`Gatsby`利用JS文件生成一个静态网页的工作流程。
+
+### Debug页面效果
+* 启动“蜂工地”
+```bash
+git clone https://github.com/yuxiang660/little-bee-client.git
+npm i
+npm start
+```
+* 输入'debug'页面的URL：`http://localhost:8000/debug`，得到如下页面：
+![DebugPage](http://q53wkmg88.bkt.clouddn.com/debug-page.png)
+
+### Debug页面代码解析
+* JS代码
+```js
+const Debug = () =>
+(
+  <Layout title="Debug">
+    <SiderBar /> // 页面左侧的侧边栏
+    <Files /> // 页面右侧的文件名列表
+  </Layout>
+);
+export default Debug;
+```
+
+## 利用模板动态生成一个网页
