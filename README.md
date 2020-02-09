@@ -10,4 +10,4 @@
 </h4>
 
 # Demo
-![Demo](http://q53wkmg88.bkt.clouddn.com/little-bee-client.gif)
+![Demo](https://github.com/yuxiang660/little-bee-client/blob/master/static/posts/3/little-bee-client.gif)
