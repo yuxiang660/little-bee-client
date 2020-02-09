@@ -22,7 +22,7 @@ title: '关于蜂乐场'
 - ["蜂工地"](https://github.com/yuxiang660/little-bee-client)
 
     “蜂工地”是“蜂乐园”的**前台客户端**，就是您现在正在浏览的网页。它是“蜂乐园”内容展示的载体，是“蜂乐园”的入口，用于大家了解“蜂乐园”。当前主要以博客形式展示，希望以后能支持更多形式。<br>
-    “蜂工地”是一个基于["Gatsby"](https://www.gatsbyjs.org/)框架的`React`网站，详情可参考博文：[“蜂工地”简介]()。
+    “蜂工地”是一个基于["Gatsby"](https://www.gatsbyjs.org/)框架的`React`网站，详情可参考博文：[“蜂工地”简介](/posts/3/2020-02-09---Little-Bee-Client-Intro/)。
 
 - ["蜂监工"](https://github.com/yuxiang660/little-bee-admin)
 
