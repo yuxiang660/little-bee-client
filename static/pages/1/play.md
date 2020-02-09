@@ -31,7 +31,7 @@ title: '玩转蜂乐场'
 ### “蜂乐场”规定了什么游玩规则？
 
 -“蜂博客”结构规则
-    - 在“蜂乐场”的博文统称为“蜂博客”，博客文章需遵循`Why? What? How?`三段式结构。详情可参考博文：[如何写一篇“蜂博客”](/posts/1/2020-02-09---How-to-Write-A-Blog-on-Bee-Playground/)
+    - 在“蜂乐场”的博文统称为“蜂博客”，博客文章需遵循`Why? What? How?`三段式结构。详情可参考博文：[如何写一篇“蜂博客”](/posts/1/2020-02-09---How-to-Write-a-Bee-Blog/)
 
 - 前端编码规则
     - 前端编码需选择`TypeScript`而不是`JavaScript`，通过类型检查尽早暴露问题。详情可参考博文：[如何在Gatsby中使用TypeScript]()
