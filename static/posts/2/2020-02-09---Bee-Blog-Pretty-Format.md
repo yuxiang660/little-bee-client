@@ -31,6 +31,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂博客”所支持�
 ### 引用
 
 - 写法
+
 ```
 > 这是一句引用。
 ```
@@ -41,6 +42,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂博客”所支持�
 ### 文本格式
 
 - 写法
+
 ```
 *斜体*，**加粗**，***加粗并斜体***
 ```
@@ -51,6 +53,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂博客”所支持�
 ### 表格
 
 - 写法
+
 ```
 | Tables   |      Are      |  Cool |
 |----------|:-------------:|------:|
@@ -72,6 +75,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂博客”所支持�
 ### C++代码
 
 - 渲染效果
+
 ```cpp
 // cpp
 void main() {
@@ -83,6 +87,7 @@ void main() {
 ### Javascript代码
 
 - 渲染效果
+
 ```js
 // js
 console.log('Hello');
@@ -91,6 +96,7 @@ console.log('Hello');
 ### Python代码
 
 - 渲染效果
+
 ```python
 # python
 print('Hello')
@@ -102,6 +108,7 @@ print('Hello')
 和代码高亮写法一样，只是代码类型写成`bash`。下面是`ls`命令的渲染效果。
 
 - 渲染效果
+
 ```bash
 ls
 ```
@@ -117,6 +124,7 @@ ls
 ## 数学公式
 
 - 写法
+
 ```
 $a^2 + b^2 = c^2$
 ```
@@ -127,11 +135,13 @@ $a^2 + b^2 = c^2$
 ## 图片
 
 - 写法1：引用站内图片资源
+
 ```
 ![image](/posts/2/image-sample.jpg)
 ```
 
 - 写法2：引用图片链接
+
 ```
 ![image](http://q53wkmg88.bkt.clouddn.com/image-sample.jpg)
 ```
@@ -142,6 +152,7 @@ $a^2 + b^2 = c^2$
 ## 标题链接
 
 - 写法：普通`Markdown`标题写法
+
 ```
 # 标题1
 ## 标题2

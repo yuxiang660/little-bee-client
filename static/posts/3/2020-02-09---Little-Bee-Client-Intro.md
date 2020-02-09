@@ -59,6 +59,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 ## “蜂工地”项目结构
 
 * [“蜂工地”](https://github.com/yuxiang660/little-bee-client)在`GitHub`上的文件组织结构如下：
+
 ```js
 .
 ├── README.md           // 说明文档
@@ -104,6 +105,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 
 ### Debug页面效果
 * 启动“蜂工地”
+
 ```bash
 git clone https://github.com/yuxiang660/little-bee-client.git
 npm i
@@ -114,6 +116,7 @@ npm start
 
 ### Debug页面代码解析
 * JS代码
+
 ```js
 const Debug = () =>
 (
