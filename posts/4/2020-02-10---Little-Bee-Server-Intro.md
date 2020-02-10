@@ -118,8 +118,9 @@ description: '这是一篇"Introduction"文章，介绍“蜂工厂”项目。'
     中间件模块实践了日志记录，身份验证，CORS支持，异常恢复等常见功能。
 
 - “蜂工厂”启动流程
-    - 利用['Go-Dig'](https://github.com/uber-go/dig)的依赖注入技术初始化各模块
-    - 开启HTTP监听
+    - 根据配置文件，配置日志模块
+    - 根据配置文件，利用['Go-Dig'](https://github.com/uber-go/dig)的依赖注入技术初始化各模块
+    - 启动HTTP服务，开启HTTP监听
 
 - “蜂工厂”工作流程
     - 用户发起`REST API`请求

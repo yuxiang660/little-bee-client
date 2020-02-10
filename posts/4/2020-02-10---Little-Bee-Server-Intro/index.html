@@ -149,8 +149,9 @@ Model模块定义了特定数据类型的特定数据库操作（例如，<code 
 <li>
 <p>“蜂工厂”启动流程</p>
 <ul>
-<li>利用<a href="https://github.com/uber-go/dig">'Go-Dig'</a>的依赖注入技术初始化各模块</li>
-<li>开启HTTP监听</li>
+<li>根据配置文件，配置日志模块</li>
+<li>根据配置文件，利用<a href="https://github.com/uber-go/dig">'Go-Dig'</a>的依赖注入技术初始化各模块</li>
+<li>启动HTTP服务，开启HTTP监听</li>
 </ul>
 </li>
 <li>
