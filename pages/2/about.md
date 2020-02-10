@@ -31,7 +31,7 @@ title: '关于蜂乐场'
 - ["蜂工厂"](https://github.com/yuxiang660/little-bee-server)
 
     “蜂工厂”是“蜂乐园”的**服务器**，为“蜂乐园”平台提供服务，包括：处理并存储“蜂乐园”用户、数据等。<br>
-    “蜂工厂”是一个基于["Gin"](https://gin-gonic.com/docs/)框架的`REST`风格服务器，详情可参考“蜂博客”：[“蜂工厂”简介]()。
+    “蜂工厂”是一个基于["Gin"](https://gin-gonic.com/docs/)框架的`REST`风格服务器，详情可参考“蜂博客”：[“蜂工厂”简介](/posts/4/2020-02-10---Little-Bee-Server-Intro/)。
 
 ### “蜂乐园”能做什么？
 
