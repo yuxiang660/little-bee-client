@@ -34,6 +34,7 @@ const createPages = async ({ graphql, actions }) => {
             fields {
               template
               slug
+              date
             }
           }
         }
