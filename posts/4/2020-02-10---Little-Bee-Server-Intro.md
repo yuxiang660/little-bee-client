@@ -98,7 +98,9 @@ description: '这是一篇"Introduction"文章，介绍“蜂工厂”项目。'
         └── store.go       // 数据模块初始化入口
 ```
 
-- “蜂工厂”架构图
+## “蜂工厂”架构
+
+- “蜂工厂”启动和工作流程图
 ![server](http://q53wkmg88.bkt.clouddn.com/little-bee-server-architecture.png)
 
 - “蜂工厂”模块
