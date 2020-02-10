@@ -42,3 +42,28 @@
 └── tsconfig.json       // typeScript configuration
 ```
 - Refer to the [introduction](https://yuxiang660.github.io/little-bee-client/posts/3/2020-02-09---Little-Bee-Client-Intro/) for details.
+
+# Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser.<br />
+Open [http://localhost:8000/___graphql](http://localhost:8000/___graphql) to debug in the browser.<br />
+The page will reload if you make edits.<br />
+
+### `npm test`
+
+Launches the tests.<br />
+
+### `npm run build`
+
+Builds the app for production to the `public` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run serve`
+
+Serve the app locally.<br />
+Open [http://localhost:9000](http://localhost:9000) to view it in the browser.<br />
