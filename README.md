@@ -12,6 +12,11 @@
 # Demo
 ![Demo](https://github.com/yuxiang660/little-bee-client/blob/master/static/posts/3/little-bee-client.gif)
 
+# Introduction
+
+- A `Gastby` based web app protected by `Typescript` and `Jest`
+- Refer to the [blog](https://yuxiang660.github.io/little-bee-client/posts/3/2020-02-09---Little-Bee-Client-Intro/) for details.
+
 # Project Structure
 
 ```js
@@ -41,7 +46,6 @@
 |    └── posts          // for post data (.md)
 └── tsconfig.json       // typeScript configuration
 ```
-- Refer to the [introduction](https://yuxiang660.github.io/little-bee-client/posts/3/2020-02-09---Little-Bee-Client-Intro/) for details.
 
 # Available Scripts
 
