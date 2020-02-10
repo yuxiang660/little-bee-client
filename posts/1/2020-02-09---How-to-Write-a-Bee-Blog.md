@@ -8,7 +8,7 @@ description: '这是一篇"Getting Started"文章，介绍如何在“蜂乐园�
 ---
 
 ![BeeBlog](http://q53wkmg88.bkt.clouddn.com/beeBlog.jpg)
-* 前导阅读：[“蜂工地”简介](/posts/3/2020-02-09---Little-Bee-Client-Intro/)
+* 前导阅读：[如何在“蜂工地”中添加一篇蜂博客](/posts/3/2020-02-09---Little-Bee-Client-Intro/#如何在蜂工地中添加一篇蜂博客)
 
 # Why
 
