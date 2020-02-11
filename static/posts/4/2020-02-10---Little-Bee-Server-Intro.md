@@ -9,7 +9,7 @@ tags:
 description: '这是一篇"Introduction"文章，介绍“蜂工厂”项目。'
 ---
 
-![Little-Bee](http://q53wkmg88.bkt.clouddn.com/little-bee.jpg)
+![Little-Bee](http://q53wkmg88.bkt.clouddn.com/server_and_gin.png)
 
 # Why
 

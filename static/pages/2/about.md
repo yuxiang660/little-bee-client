@@ -26,7 +26,7 @@ title: '关于蜂乐场'
 
 - ["蜂监工"](https://github.com/yuxiang660/little-bee-admin)
 
-    “蜂监工”是“蜂乐园”的**后台客户端**，用于监管“蜂乐园”平台，包括，查看“蜂乐园”服务器状态，管理“蜂乐园”用户、数据等。<br> “蜂监工”是一个基于["Ant Design Pro"](https://pro.ant.design/index-cn)框架的`REST`风格网站，详情可参考“蜂博客”：[“蜂监工”简介]()。
+    “蜂监工”是“蜂乐园”的**后台客户端**，用于监管“蜂乐园”平台，包括，查看“蜂乐园”服务器状态，管理“蜂乐园”用户、数据等。<br> “蜂监工”是一个基于["Ant Design Pro"](https://pro.ant.design/index-cn)框架的`REST`风格网站，详情可参考“蜂博客”：[“蜂监工”简介](/posts/5/2020-02-10---Little-Bee-Admin-Intro/)。
 
 - ["蜂工厂"](https://github.com/yuxiang660/little-bee-server)
 
