@@ -62,7 +62,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 ## “蜂监工”是如何工作的？
 
 - [项目展示](https://github.com/yuxiang660/little-bee-admin)
-![Demo](http://q53wkmg88.bkt.clouddn.com/little-bee-admin-demo.gif)
+![Demo](http://q53wkmg88.bkt.clouddn.com/little-bee-admin-demo2.gif)
 
 ## “蜂监工”是如何实现的？
 
@@ -116,6 +116,274 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 └── tsconfig.json              // 对Typescript文件的主配置
 ```
 
-## “蜂监工”如何渲染一个静态页面
+## “蜂监工”如何创建一个无交互页面
 
+“蜂监工”渲染一个新页面只需要两个步骤：
+- 在["/config/config.ts"](https://github.com/yuxiang660/little-bee-admin/blob/master/config/config.ts)中添加路由
+- 在["/src/pages"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/pages)目录中添加新页面组件
 
+下面以["welcome"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/pages/welcome)页面为例子，阐述“如何创建一个无交互页面”。
+
+### "welcome"页面效果
+- 启动“蜂监工”，输入"welcome"页面的URL：["http://localhost:9191/welcome"](http://localhost:9191/welcome)，得到如下页面：
+![welcome](http://q53wkmg88.bkt.clouddn.com/welcome-page.gif)
+
+### 为"welcome"页面添加路由
+在["/config/config.ts"](https://github.com/yuxiang660/little-bee-admin/blob/master/config/config.ts)的`routes[]`中添加如下代码：
+
+```js
+{
+    path: '/welcome',
+    name: 'welcome',
+    icon: 'smile',
+    component: './welcome',
+},
+```
+
+- `path`指定了URL地址
+- `name`指定了此页面在菜单栏中的显示文字
+- `icon`指定了此页面在菜单栏中的显示图标
+- `component`指定了此页面组件在`/src/pages`文件夹中的相对位置
+
+具体步骤可参考[官网教程](https://pro.ant.design/docs/router-and-nav-cn)。
+
+### 为"welcome"页面添加组件
+
+在["/src/pages"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/pages)目录中添加新文件夹["welcome"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/pages/welcome)，并在其中新建入口文件["index.txs"](https://github.com/yuxiang660/little-bee-admin/blob/master/src/pages/welcome/index.tsx)，代码如下：
+
+```js
+// ./welcome/index.txs
+export default (): React.ReactNode => (
+  <PageHeaderWrapper>
+    <Card>
+      ...
+      <Carousel autoplay>
+        <div className={styles.container}>
+          <img src="http://q53wkmg88.bkt.clouddn.com/1.png" alt="Loading" />
+        </div>
+        ...
+      </Carousel>
+    </Card>
+  </PageHeaderWrapper>
+);
+```
+
+"index.txs"文件`export`了一个[`React-JSX`](https://reactjs.org/docs/introducing-jsx.html)组件。此组件会被框架的[`Layout`](https://github.com/yuxiang660/little-bee-admin/tree/master/src/layouts)组件接收并渲染。每个页面的`Layout`也是定义在["/config/config.ts"](https://github.com/yuxiang660/little-bee-admin/blob/master/config/config.ts)中。"welcome"的`Layout`组件为`BasicLayout`，定义如下：
+
+```js
+routes: [
+{
+    path: '/',
+    component: '../layouts/BasicLayout', // 此块区域的Layout都为BasicLayout
+    authority: ['admin', 'user'],
+    routes: [
+    {
+        path: '/welcome',
+        name: 'welcome',
+        icon: 'smile',
+        component: './welcome',
+    },
+]
+```
+
+对`Layout`的详细配置，可参考[官网教程](https://pro.ant.design/docs/layout-cn)。
+
+## “蜂监工”如何创建一个服务器交互页面
+
+在"Ant Design Pro"中，一个完整的UI交互到服务器处理流程如下（[官网教程](https://pro.ant.design/docs/server-cn)）：
+- UI 组件交互操作；
+- 调用 model 的 effect；
+- 调用统一管理的 service 请求函数；
+- 使用封装的 request.ts 发送请求；
+- 获取服务端返回；
+- 然后调用 reducer 改变 state；
+- 更新 model。
+
+下面以["request"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/pages/request)页面为例子，阐述“如何创建一个服务器交互页面”。
+
+### "request"页面效果
+- 启动“蜂监工”，输入登录页面URL：["http://localhost:9191/login"](http://localhost:9191/login)登录“蜂监工”，用户名密码均为“admin”。在菜单栏定位到"request"页面，按下图操作从服务器得到所有用户信息：
+![request](http://q53wkmg88.bkt.clouddn.com/request-page.gif)
+
+### 为"request"页面添加路由
+
+"request"页面路由的创建方法和"无交互页面"是一样的，可参考上面部分：[为"welcome"页面添加组件](/posts/5/2020-02-10---Little-Bee-Admin-Intro/#为welcome页面添加路由)。
+
+### 为"request"页面添加"UI"组件
+
+["request"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/pages/request)组件目录结构如下：
+
+```js
+└──request               // Request组件主目录
+    ├── apiList          // Request组件的子组件目录，对应request页面左侧的"URL"列表
+    │   ├── index.less   // ApiList子组件样式
+    │   └── index.tsx    // ApiList子组件
+    ├── command          // Request组件的子组件目录，对应request页面右侧的命令发送和接收列表
+    │   ├── index.less   // Command子组件样式
+    │   └── index.tsx    // Command子组件
+    ├── index.less       // Request组件样式
+    └── index.tsx        // Request组件
+```
+
+不同于"welcome"页面的"UI"组件，"request"页面的"UI"组件是可以和用户交互的。如下图所示，用户点击"URL"列表，右侧的输入框中的内容会变化。
+![request-action](http://q53wkmg88.bkt.clouddn.com/request-action.gif)
+
+#### 什么是"redux"
+
+“蜂监工”采用"redux"模式实现不同组件的状态共享，以达到上面的效果。"Ant Design Pro"利用"UmiJS"和"DvaJS"可快速实现"redux"模式，可参考"UmiJS"的官方教程：[Use umi with dva](https://umijs.org/zh/guide/with-dva.html)。"redux"模式相对复杂，其中涉及很多概念，简单来说，就是两点：1. 状态变化单向流动；2. 全局共享状态。详情可参考“蜂博客”：[什么是"redux"]()。
+
+"Ant Design Pro"调试"redux"模式非常方便，通过["Redux DevTools"](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)工具，可以查看所有共享状态的变化。
+![reduxDevTools](http://q53wkmg88.bkt.clouddn.com/ReduxDevTools2.png)
+
+#### 如何实现"redux"
+
+- 为"request"组件创建[`model`](https://github.com/yuxiang660/little-bee-admin/blob/master/src/models/request.ts)， 所有"request"组件可共享此`model`中的状态。
+
+```js
+/* ./src/models/request.ts */
+// 共享状态的类型
+export interface RequestStateType {
+    method?: 'POST' | 'GET' | 'PUT' | 'PATCH' | 'DELETE';
+    url?: string;
+    ...
+}
+
+reducers: {
+    // 修改共享状态的方法
+    changeApiRoute(state, { payload }) {
+      return {
+        ...state,
+        method: payload.method ? payload.method : state?.method,
+        url: payload.url ? payload.url : state?.url,
+      };
+    },
+}
+```
+
+- 绑定点击动作到[`ApiList`组件](https://github.com/yuxiang660/little-bee-admin/blob/master/src/pages/request/apiList/index.tsx)，修改共享状态。
+
+```js
+<List.Item
+    onClick={() => {
+        const { dispatch } = props;
+        // dispatch 方法会调用request model中的changeApiRoute，按照payload修改共享状态
+        dispatch({
+            type: 'request/changeApiRoute',
+            payload: { method: item.method, url: item.url },
+        });
+        ...
+    }}
+>
+```
+
+- ["Command"组件](https://github.com/yuxiang660/little-bee-admin/blob/master/src/pages/request/command/index.tsx)渲染修改的共享状态给用户。
+
+```js
+<Input
+    value={request.url}
+    ...
+/>
+...
+// 连接Command组件和共享状态，以此通过"request"获取共享状态"request.url"
+export default connect(({ request }: ConnectState) => ({
+    request,
+}))(Command);
+```
+
+至此，"request"页面的"UI"界面就开发完成了，下面为"request"页面添加服务器交互功能。
+
+### 为"request"页面添加服务器交互
+
+#### "request"页面服务器交互效果
+
+如下图所示，当点击"Send"按钮时，网页会向服务器发起`request`请求，服务器处理完后，返回`respond`给网页，网页将收到的数据显示到`results`框中。
+
+![send](http://q53wkmg88.bkt.clouddn.com/send-action.gif)
+
+#### 如何用"redux"实现服务器交互
+
+与"UI"交互相同的是，服务器交互也是通过改变全局状态，通知相关组件重新渲染数据。而与"UI"交互不同的是，服务器交互是异步操作，因此需要触发`effect`操作。
+
+- 添加`effect`操作到["request model"](https://github.com/yuxiang660/little-bee-admin/blob/master/src/models/request.ts)。
+
+```js
+/* ./src/models/request.ts */
+export interface RequestStateType {
+    respond?: string; // 用于存储服务器返回数据
+    ...
+}
+
+reducers: {
+    // 根据收到的数据，更新全局状态"respond"
+    saveResponse(state, action) {
+        return {
+            ...state,
+            respond: JSON.stringify(action.payload),
+        };
+    },
+},
+
+effects: {
+    *send({ payload: { method, url, body } }, { call, put }) {
+        // 调用"apiRequest"函数，向服务器发起请求
+        const { data } = yield call(apiRequest, method, url, body);
+        // 得到服务器返回的数据后，通过"saveResponse"更新共享状态
+        yield put({
+            type: 'saveResponse',
+            payload: data,
+        });
+    },
+},
+
+```
+
+- 绑定发起服务器请求到["Command"组件](https://github.com/yuxiang660/little-bee-admin/blob/master/src/pages/request/command/index.tsx)
+
+```js
+<Button
+    onClick={() => {
+        const { dispatch } = props;
+        // dispatch 方法会调用request model中的send，payload包含发送给服务器的数据
+        dispatch({
+        type: 'request/send',
+        payload: { method: request.method, url: request.url, body: request.body },
+        });
+    }}
+    ...
+>
+```
+
+- ["Command"组件](https://github.com/yuxiang660/little-bee-admin/blob/master/src/pages/request/command/index.tsx)在收到服务器数据后，会将数据渲染到网页中。
+
+```js
+<div className={styles.result}>{request.respond}</div>
+...
+// 连接Command组件和共享状态，以此通过"request"获取共享状态"request.respond"
+export default connect(({ request }: ConnectState) => ({
+    request,
+}))(Command);
+```
+
+- 至此，还有最后一个问题：`send`函数中向服务器发送请求的函数`apiRequest`是如何实现的？"Ant Design Pro"通过["umi-request"库](https://github.com/umijs/umi-request)实现与服务器的通信。所有服务器通信函数都定义在["src/services"](https://github.com/yuxiang660/little-bee-admin/tree/master/src/services)下。“蜂监工”统一了大部分的服务器请求，[代码](https://github.com/yuxiang660/little-bee-admin/blob/master/src/services/apiRoutes.ts)如下：
+
+```js
+/* src/services/apiRoutes.ts */
+export async function apiRequest(method: string, url: string, body?: string): Promise<any> {
+  let params: any;
+  if (body) {
+    try {
+      params = JSON.parse(body);
+    } catch (err) {
+      notification.error({
+        message: err.name,
+        description: err.message,
+      });
+    }
+  }
+  // 调用"umi-request"库，发起请求
+  return request(url, {
+    method,
+    data: params,
+  });
+}
+```
