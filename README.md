@@ -15,7 +15,7 @@
 # Introduction
 
 - A `Gastby` based web app protected by `Typescript` and `Jest`
-- Refer to the [blog](https://yuxiang660.github.io/little-bee-client/posts/3/2020-02-09---Little-Bee-Client-Intro/) for details.
+- Refer to the [blog](https://github.com/yuxiang660/little-bee-client/blob/master/.github/demo.gif) for details.
 
 # Project Structure
 
