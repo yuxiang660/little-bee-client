@@ -134,6 +134,8 @@ $a^2 + b^2 = c^2$
 
 ## 图片
 
+### 静态图片(png, jpg)
+
 - 写法
 
 ```
@@ -143,6 +145,18 @@ $a^2 + b^2 = c^2$
 - 渲染效果
 
 ![image](/posts/2/image-sample.jpg)
+
+### 动态图片(gif)
+
+- 写法
+
+```
+![little-bee](little-bee.gif)
+```
+
+- 渲染效果
+
+![little-bee](little-bee.gif)
 
 ## 标题链接
 
