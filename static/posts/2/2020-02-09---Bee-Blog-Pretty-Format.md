@@ -7,7 +7,7 @@ tags:
 description: '这是一篇"Introduction"文章，介绍“蜂博客”所支持的相关格式。'
 ---
 
-![Markdown](http://q53wkmg88.bkt.clouddn.com/Markdown-Logo.png)
+![markdown](/posts/2/markdown.png)
 
 # Why
 
@@ -134,20 +134,15 @@ $a^2 + b^2 = c^2$
 
 ## 图片
 
-- 写法1：引用站内图片资源
+- 写法
 
 ```
 ![image](/posts/2/image-sample.jpg)
 ```
 
-- 写法2：引用图片链接
+- 渲染效果
 
-```
-![image](http://q53wkmg88.bkt.clouddn.com/image-sample.jpg)
-```
-
-- 渲染效果<br>
-![image](http://q53wkmg88.bkt.clouddn.com/image-sample.jpg)
+![image](/posts/2/image-sample.jpg)
 
 ## 标题链接
 
