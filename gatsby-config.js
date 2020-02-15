@@ -22,7 +22,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-relative-images-v2`,
           {
             resolve: `gatsby-remark-images`,
@@ -30,6 +29,13 @@ module.exports = {
               maxWidth: 800,
               withWebp: true,
               ignoreFileExtensions: [],
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `asserts`,
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
             },
           },
           {
