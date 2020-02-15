@@ -39,14 +39,14 @@ self.__precacheManifest = [
     "url": "commons-822f3c84fc2f482ae815.js"
   },
   {
-    "url": "app-d49810fef4b237ccfd74.js"
+    "url": "app-963a997c55a61266a7a4.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-cf2fd0f92da7499f18b1.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b3688a5d9a8155006a8c1057a9499ab4"
+    "revision": "19874eb27fb26fbd3f8bc8473b6be577"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -147,7 +147,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/little-bee-client/app-d49810fef4b237ccfd74.js`))) {
+  if (!resources || !(await caches.match(`/little-bee-client/app-963a997c55a61266a7a4.js`))) {
     return await fetch(event.request)
   }
 

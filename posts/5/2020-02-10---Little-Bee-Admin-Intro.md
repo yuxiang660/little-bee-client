@@ -62,7 +62,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 ## “蜂监工”是如何工作的？
 
 - [项目展示](https://github.com/yuxiang660/little-bee-admin)
-![little-bee-admin-demo](/posts/5/little-bee-admin-demo.gif)
+![little-bee-admin-demo](little-bee-admin-demo.gif)
 
 ## “蜂监工”是如何实现的？
 
@@ -126,7 +126,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 
 ### "welcome"页面效果
 - 启动“蜂监工”，输入"welcome"页面的URL：["http://localhost:9191/welcome"](http://localhost:9191/welcome)，得到如下页面：
-![welcome-page](/posts/5/welcome-page.gif)
+![welcome-page](welcome-page.gif)
 
 ### 为"welcome"页面添加路由
 在["/config/config.ts"](https://github.com/yuxiang660/little-bee-admin/blob/master/config/config.ts)的`routes[]`中添加如下代码：
@@ -203,7 +203,7 @@ routes: [
 
 ### "request"页面效果
 - 启动“蜂监工”，输入登录页面URL：["http://localhost:9191/login"](http://localhost:9191/login)登录“蜂监工”，用户名密码均为“admin”。在菜单栏定位到"request"页面，按下图操作从服务器得到所有用户信息：
-![request-page](/posts/5/request-page.gif)
+![request-page](request-page.gif)
 
 ### 为"request"页面添加路由
 
@@ -226,7 +226,7 @@ routes: [
 ```
 
 不同于"welcome"页面的"UI"组件，"request"页面的"UI"组件是可以和用户交互的。如下图所示，用户点击"URL"列表，右侧的输入框中的内容会变化。
-![request-action](/posts/5/request-action.gif)
+![request-action](request-action.gif)
 
 #### 什么是"redux"
 
@@ -298,7 +298,7 @@ export default connect(({ request }: ConnectState) => ({
 
 如下图所示，当点击"Send"按钮时，网页会向服务器发起`request`请求，服务器处理完后，返回`respond`给网页，网页将收到的数据显示到`results`框中。
 
-![send-action](/posts/5/send-action.gif)
+![send-action](send-action.gif)
 
 #### 如何用"redux"实现服务器交互
 
