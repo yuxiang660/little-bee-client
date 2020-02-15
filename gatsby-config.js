@@ -23,6 +23,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
+          `gatsby-remark-relative-images-v2`,
           {
             resolve: `gatsby-remark-images`,
             options: {
