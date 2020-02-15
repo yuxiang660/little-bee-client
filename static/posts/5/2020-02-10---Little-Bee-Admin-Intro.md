@@ -10,7 +10,7 @@ tags:
 description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 ---
 
-![Little-Bee](http://q53wkmg88.bkt.clouddn.com/admin_and_antd.png)
+![little-bee-admin-logo](/posts/5/little-bee-admin-logo.png)
 
 # Why
 
@@ -40,7 +40,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 
 - "react-admin"的["Data Provider"](https://marmelab.com/react-admin/DataProviders.html)
 "react-admin"通过`Data Provider`与服务器交互，官方提供通用的`Data Provider`，但如果您的需求比较复杂，就需要自行编写`Data Provider`。
-![DataProvider](http://q53wkmg88.bkt.clouddn.com/react-admin.png)
+![react-admin](/posts/5/react-admin.png)
 
 - "Ant Design Pro"的["UmiJS-request"](https://github.com/umijs/umi-request)
 "Ant Design Pro"采用了[`UmiJS`](https://umijs.org/zh/guide/)的"UmiJS-request"库，作为与服务器交互手段。是一种比较通用的做法，而且并没有强制用户必须使用"UmiJS-request"。用户也可以用自己喜欢的其他库，如`react-axios`等。
@@ -62,7 +62,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 ## “蜂监工”是如何工作的？
 
 - [项目展示](https://github.com/yuxiang660/little-bee-admin)
-![Demo](http://q53wkmg88.bkt.clouddn.com/little-bee-admin-demo2.gif)
+![little-bee-admin-demo](/posts/5/little-bee-admin-demo.gif)
 
 ## “蜂监工”是如何实现的？
 
@@ -126,7 +126,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂监工”项目。'
 
 ### "welcome"页面效果
 - 启动“蜂监工”，输入"welcome"页面的URL：["http://localhost:9191/welcome"](http://localhost:9191/welcome)，得到如下页面：
-![welcome](http://q53wkmg88.bkt.clouddn.com/welcome-page.gif)
+![welcome-page](/posts/5/welcome-page.gif)
 
 ### 为"welcome"页面添加路由
 在["/config/config.ts"](https://github.com/yuxiang660/little-bee-admin/blob/master/config/config.ts)的`routes[]`中添加如下代码：
@@ -203,7 +203,7 @@ routes: [
 
 ### "request"页面效果
 - 启动“蜂监工”，输入登录页面URL：["http://localhost:9191/login"](http://localhost:9191/login)登录“蜂监工”，用户名密码均为“admin”。在菜单栏定位到"request"页面，按下图操作从服务器得到所有用户信息：
-![request](http://q53wkmg88.bkt.clouddn.com/request-page.gif)
+![request-page](/posts/5/request-page.gif)
 
 ### 为"request"页面添加路由
 
@@ -226,14 +226,14 @@ routes: [
 ```
 
 不同于"welcome"页面的"UI"组件，"request"页面的"UI"组件是可以和用户交互的。如下图所示，用户点击"URL"列表，右侧的输入框中的内容会变化。
-![request-action](http://q53wkmg88.bkt.clouddn.com/request-action.gif)
+![request-action](/posts/5/request-action.gif)
 
 #### 什么是"redux"
 
 “蜂监工”采用"redux"模式实现不同组件的状态共享，以达到上面的效果。"Ant Design Pro"利用"UmiJS"和"DvaJS"可快速实现"redux"模式，可参考"UmiJS"的官方教程：[Use umi with dva](https://umijs.org/zh/guide/with-dva.html)。"redux"模式相对复杂，其中涉及很多概念，简单来说，就是两点：1. 状态变化单向流动；2. 全局共享状态。详情可参考“蜂博客”：[什么是"redux"]()。
 
 "Ant Design Pro"调试"redux"模式非常方便，通过["Redux DevTools"](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)工具，可以查看所有共享状态的变化。
-![reduxDevTools](http://q53wkmg88.bkt.clouddn.com/ReduxDevTools2.png)
+![redux-dev-tools](/posts/5/redux-dev-tools.png)
 
 #### 如何实现"redux"
 
@@ -298,7 +298,7 @@ export default connect(({ request }: ConnectState) => ({
 
 如下图所示，当点击"Send"按钮时，网页会向服务器发起`request`请求，服务器处理完后，返回`respond`给网页，网页将收到的数据显示到`results`框中。
 
-![send](http://q53wkmg88.bkt.clouddn.com/send-action.gif)
+![send-action](/posts/5/send-action.gif)
 
 #### 如何用"redux"实现服务器交互
 
