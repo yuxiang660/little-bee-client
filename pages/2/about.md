@@ -2,7 +2,7 @@
 title: '关于蜂乐场'
 ---
 
-![playground](http://q53wkmg88.bkt.clouddn.com/aboutPlayground2.png)
+![playground](/pages/2/aboutPlayground.png)
 
 ## Why
 

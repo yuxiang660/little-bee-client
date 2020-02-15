@@ -2,7 +2,7 @@
 title: '玩转蜂乐场'
 ---
 
-![PlayWithRules](http://q53wkmg88.bkt.clouddn.com/playWithRules.jpg)
+![PlayWithRules](/pages/1/playWithRules.jpg)
 
 ## Why
 
