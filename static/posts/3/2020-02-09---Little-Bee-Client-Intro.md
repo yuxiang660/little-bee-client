@@ -9,7 +9,7 @@ tags:
 description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 ---
 
-![Little-Bee](http://q53wkmg88.bkt.clouddn.com/client_and_gatsby.png)
+![little-bee-client-logo](/posts/3/little-bee-client-logo.png)
 
 # Why
 
@@ -43,7 +43,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 ## “蜂工地”是如何工作的？
 
 - [项目展示](https://little-bee-client.netlify.com/)
-![Demo](http://q53wkmg88.bkt.clouddn.com/little-bee-client-demo2.gif)
+![little-bee-client-demo](/posts/3/little-bee-client-demo.gif)
 
 ## “蜂工地”是如何实现的？
 
@@ -121,7 +121,7 @@ gatsby develop
 ### Debug页面效果
 - 启动“蜂工地”，输入'debug'页面的URL：`http://localhost:8000/debug`，得到如下页面：
 
-  ![DebugPage](http://q53wkmg88.bkt.clouddn.com/debug-page.png)
+  ![debug-page](/posts/3/debug-page.png)
 
 ### Debug页面代码解析
 - JS代码
@@ -142,13 +142,13 @@ export default Debug;
   - `Gatsby`读取`/src/pages`下的`debug.tsx`文件。
   - 渲染该文件`export`的[React-JSX](https://zh-hans.reactjs.org/docs/introducing-jsx.html#___gatsby)，如果你对`React-JSX`不是很了解，可以简单理解为一种强大的`HTML`。
   - `Gatsby`会根据`/src/pages`下的`debug.tsx`文件的文件名，为该页面生成对应的路由地址。因此，可以直接通过`http://localhost:8000/debug`访问到该页面。如果在`/src/pages`下创建`index.tsx`文件，则可以在路由中省略`index`，直接通过`http://localhost:8000`访问。下图显示了“蜂工地”的部分可用路由：<br>
-  ![Routers](http://q53wkmg88.bkt.clouddn.com/litte-bee-routers.png)
+  ![little-bee-client-routers](/posts/3/little-bee-client-routers.png)
 
 ## 如何利用模板动态生成一个页面
 静态网站生成器之所以叫生成器，就是因为他们可以根据模板，自动生成多个页面。`Gatsby`作为一个强大的静态网站生成器（当然`Gatsby`的功能远大于一个静态网站生成器），自然可以根据模板生成页面。
 
 简单来说，如下图所示，`Gatsby`读取对用户友好的`Markdown`文件，按照`template`模板的规则，自动生成对应的一个网页。这样，用户就可以只撰写一个`Markdown`语法格式的文档，就可以得到一个网页，分享在互联网上。
-![gatsby-template](http://q53wkmg88.bkt.clouddn.com/gatsby-template.png)
+![gatsby-template](/posts/3/gatsby-template.png)
 
 下面以[/src/templates/not-found.tsx](https://github.com/yuxiang660/little-bee-client/blob/master/src/templates/not-found.tsx)为例子，阐述“蜂工地”的动态页面生成过程。
 
@@ -156,7 +156,7 @@ export default Debug;
 
 * 启动“蜂工地”后，在浏览器中输入：`http://localhost:8000/404`，得到如下页面：
 
-  ![not-found-page](http://q53wkmg88.bkt.clouddn.com/not-found-page.png)
+  ![not-found-page](/posts/3/not-found-page.png)
 
 ### 'not-found'动态页面生成代码分析
 - `not-found`模板代码
@@ -230,4 +230,4 @@ export default PostTemplate;
 ['GraphQL'](https://www.gatsbyjs.org/docs/graphql-concepts/)是`Gatsby`中最关键的技术，管理着`Gatsby`网页的所有数据。`Gatsby`在编译阶段，会将所有数据（包括以`Markdown`格式存放的博客文件）存入'GraphQL'，因此所有页面都可以很方便地通过`GraphQL API`获取所有数据。详情可参考“蜂博客”：[什么是"Gastby"]()。
 
 为了便于调试，`Gatsby`还为我们自动生成了`___graphql`页面，用于本地开发调试。`gatsby develop`启动网站后，输入`http://localhost:8000/___graphql`即可得到如下页面，可用`GraphQL API`操作所有数据：
-![graphql](http://q53wkmg88.bkt.clouddn.com/GraphiQL.png)
+![graphql](/posts/3/graphiql.png)
