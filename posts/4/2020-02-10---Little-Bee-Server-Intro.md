@@ -9,7 +9,7 @@ tags:
 description: '这是一篇"Introduction"文章，介绍“蜂工厂”项目。'
 ---
 
-![Little-Bee](http://q53wkmg88.bkt.clouddn.com/server_and_gin.png)
+![little-bee-server-logo](/posts/4/little-bee-server-logo.png)
 
 # Why
 
@@ -42,7 +42,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工厂”项目。'
 由于“蜂工厂”是一个后台服务器，并没有友好的`UI`界面，因此这里用`Postman`结合["swagger API 文档"](https://yuxiang660.github.io/little-bee-server/)，以操作`URL: /api/v1/pub/login`做演示。
 
 - [项目展示](https://github.com/yuxiang660/little-bee-server)
-![Demo](http://q53wkmg88.bkt.clouddn.com/little-bee-server-demo.gif)
+![little-bee-server-demo](/posts/4/little-bee-server-demo.gif)
 
 ## “蜂工厂”是如何实现的？
 
@@ -101,7 +101,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工厂”项目。'
 ## “蜂工厂”架构
 
 - “蜂工厂”启动和工作流程图
-![server](http://q53wkmg88.bkt.clouddn.com/little-bee-server-architecture.png)
+![little-bee-server-architecture](/posts/4/little-bee-server-architecture.png)
 
 - “蜂工厂”模块
     - 日志模块Logger<br>
