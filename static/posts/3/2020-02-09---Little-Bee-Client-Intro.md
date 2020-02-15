@@ -43,7 +43,7 @@ description: '这是一篇"Introduction"文章，介绍“蜂工地”项目。'
 ## “蜂工地”是如何工作的？
 
 - [项目展示](https://little-bee-client.netlify.com/)
-![little-bee-client-demo](/posts/3/little-bee-client-demo.gif)
+![little-bee-client-demo](little-bee-client-demo.gif)
 
 ## “蜂工地”是如何实现的？
 

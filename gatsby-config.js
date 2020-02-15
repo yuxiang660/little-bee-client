@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-relative-images-v2`,
           {
             resolve: `gatsby-remark-images`,
@@ -43,6 +43,7 @@ module.exports = {
               },
             },
           },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-katex`,
             options: {
