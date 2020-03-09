@@ -230,4 +230,4 @@ export default PostTemplate;
 ['GraphQL'](https://www.gatsbyjs.org/docs/graphql-concepts/)是`Gatsby`中最关键的技术，管理着`Gatsby`网页的所有数据。`Gatsby`在编译阶段，会将所有数据（包括以`Markdown`格式存放的博客文件）存入'GraphQL'，因此所有页面都可以很方便地通过`GraphQL API`获取所有数据。详情可参考“蜂博客”：[什么是"Gastby"]()。
 
 为了便于调试，`Gatsby`还为我们自动生成了`___graphql`页面，用于本地开发调试。`gatsby develop`启动网站后，输入`http://localhost:8000/___graphql`即可得到如下页面，可用`GraphQL API`操作所有数据：
-![graphql](/posts/3/graphiql.png)
+![graphql](/posts/3/graphql.png)
